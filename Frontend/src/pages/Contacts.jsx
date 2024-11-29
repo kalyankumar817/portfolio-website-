@@ -10,7 +10,7 @@ const Contacts = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
       axios
-      .post('http://localhost:5000/portfolio/users/post', { name, email, message })
+      .post('https://portfolio-website-eight-theta-75.vercel.app/portfolio/users/post', { name, email, message })
       .then((res) => {
         // Show success message
         alert('Your message has been sent successfully. We will contact you shortly!');
