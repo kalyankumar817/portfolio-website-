@@ -1,0 +1,103 @@
+/* General form container */
+.contact-container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 174, 0, 0.7), rgba(0, 255, 255, 0.7));
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Heading styles */
+  .contact-heading {
+    text-align: center;
+    color: Khaki;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 40px 0;
+    text-decoration: underline;
+  }
+  
+  /* Form fields container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Label styles */
+  label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Input fields styling */
+  input[type="text"], textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Focus effect for input fields */
+  input[type="text"]:focus, textarea:focus {
+    border-color: #ff7e00;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 126, 0, 0.5);
+  }
+  
+  /* Textarea styling with increased width */
+  textarea {
+    width: 100%; /* Makes the textarea take up the full width of its container */
+    min-height: 100px; /* Keeps the height reasonable */
+    resize: vertical; /* Allows vertical resizing only */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Submit button */
+  button[type="submit"] {
+    padding: 12px;
+    background-color: #ff7e00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect for submit button */
+  button[type="submit"]:hover {
+    background-color: #ff4d00;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design for mobile screens */
+  @media (max-width: 768px) {
+    .contact-container {
+      width: 80%;
+    }
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

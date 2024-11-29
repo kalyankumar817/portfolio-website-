@@ -1,0 +1,80 @@
+.total-block{
+    margin: 100px 0px;
+}
+.heading-tabs{
+    display: flex;
+    margin: 40px;
+}
+.tab-links{
+    margin: 10px 10px;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links:hover{
+    color: orangered;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 20%;
+}
+.tab-links.active-link{
+    color: hotpink;
+}
+.tab-contents{
+    margin: 10px 20px;
+}
+.tab-contents ul li{
+    list-style: none;
+    color: white;
+    margin: 20px 0px;
+}
+.tab-contents ul li span{
+    color: springgreen;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+@media(min-width:427px) and (max-width:769px){
+    .tab-contents ul li span{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .heading-tabs{
+        margin: 20px;
+    }
+    .tab-links{
+        font-size: 30px;
+    }
+}
+@media(min-width:250px) and (max-width:426px){
+    h2{
+        font-size: 10px;
+    }
+    .heading-tabs{
+        margin: 10px;
+    }
+    .tab-links{
+        font-size: 20px;
+    }
+    .tab-contents ul li span{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,203 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* //for navabar sticky we need header sticky */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container{
+  /* //this will be empty bcz all containers we use in nav ,,so dont worry */
+}
+
+/* //this will entire container for all navbar and links  */
+.navbar{
+  border: 1px solid yellow;
+  background: linear-gradient(270deg, #0d0d0d, #48672a, #004c4c, #0d0d0d); /* Added an extra color for more variation */
+  background-size: 800% 800%; /* Increased size for a smoother effect */
+  animation: gradientShift 6s ease-in-out infinite; /* Smooth transition from left to right */
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* //this is a brand container */
+.brand{
+  color: white;
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  animation: fadeIn 2s ease, glow 1.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #ffdd00, 0 0 10px #ffdd00, 0 0 15px #ffdd00, 0 0 20px #ff7f00, 0 0 30px #ff7f00, 0 0 40px #ff7f00;
+}
+/* Glowing effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ffdd00, 0 0 10px #ffdd00, 0 0 15px #ffdd00, 0 0 20px #ff7f00, 0 0 30px #ff7f00, 0 0 40px #ff7f00;
+  }
+  to {
+    text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffdd00, 0 0 30px #ffdd00, 0 0 40px #ff7f00, 0 0 50px #ff7f00, 0 0 60px #ff7f00;
+  }
+}
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-links{
+    /* //it is a navbar container,bcz its empty of uisng ul container in this container */
+}
+
+/* //navlinks container of ul */
+.nav-links{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* //navlinks inside li items to set margin */
+.nav-links li{
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* //navlinks inside li a items to set the styles */
+.nav-links li a{
+  text-decoration: none;
+  color: yellow;
+  font-size:20px;
+  font-weight: bold;
+  transition: color 0.5s; /* Smooth transition for color */
+  position: relative;  /* parent for the after(underline style)  */
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover{
+  color: magenta;
+}
+.nav-links li a::after{
+  content: ""; /* its manditory for creating empty for underline,icon,bgshape,or highlight */
+  background: linear-gradient(to right,red,blue);
+  border-radius: 100px;
+  transition: width 0.3s; /* Smooth transition for underline */
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+}
+.nav-links a:hover::after {
+  width: 100%; /* Expands underline on hover */
+}
+
+/* //toggle button */
+.toggle-btn{
+  /* //this is button container  */
+}
+.toggle-btn-openclose{
+  background:none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* //media queries */
+/* //for tablets size */
+@media(min-width:427px) and (max-width:769px){
+  .brand{
+    font-size: 30px;
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -110%;
+    max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 6px;
+    transition: left 0.5s ease; /* Smooth slide-in transition */
+  }
+  .nav-links li{
+    margin-top: 10px;
+  }
+  .nav-links.active{
+    left: 0;
+  }
+  .toggle-btn-openclose{
+    display: block;
+  }
+  .toggle-btn{
+    margin-left: 250px;
+  }
+}
+
+/* for phone sizes */
+@media(min-width:250px) and (max-width:426px){
+  .brand{
+    font-size: 20px;
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -110%;
+    max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 6px;
+    transition: left 0.5s ease; /* Smooth slide-in transition */
+  }
+  .nav-links li{
+    margin-top: 10px;
+  }
+  .nav-links.active{
+    left: 0;
+  }
+  .toggle-btn-openclose{
+    display: block;
+  }
+  .toggle-btn{
+    margin-left: 30px;
+  }
+}
+
+
+/* //for scrolling purpose */
+html{
+  scroll-behavior: smooth;
+}
+.nav-links li a.active{
+  color: magenta;
+}
+

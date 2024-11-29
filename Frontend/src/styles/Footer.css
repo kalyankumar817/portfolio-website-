@@ -1,0 +1,38 @@
+/* Container styling for the footer */
+.footer-container {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Flexbox for icons */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Styling for the links */
+  .icon-link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for icons */
+  .icon-link:hover {
+    transform: scale(1.2);
+    color: #ff7e00;
+  }
+  
+  /* Footer text */
+  .footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  

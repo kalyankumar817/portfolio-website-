@@ -1,0 +1,49 @@
+.project-container {
+    color: white;
+    margin: 100px 0px;
+}
+
+.projects{
+    border: 2px solid green;
+    border-radius: 10px;
+    margin: 10px 10px;
+    position: relative;
+    overflow: hidden;
+}
+.projects h3{
+    text-align: center;
+    color: violet;
+}
+p{
+    margin: 10px;
+    list-style: 1.5;
+}
+.projects img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .projects .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .projects:hover img {
+    transform: scale(1.1); /* Slight zoom on image hover */
+  }
+  
+  .projects:hover .overlay {
+    opacity: 1;
+  }
