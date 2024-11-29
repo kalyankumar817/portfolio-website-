@@ -27,7 +27,7 @@ const Contacts = () => {
       <h2 className='contact-heading'>Contact Me</h2>
       <form className='form-container' onSubmit={handleSubmit}>
         <div>
-          <label style={{ color: '#4B0082' }} htmlFor='name'>
+          <label style={{ color: 'orange' }} htmlFor='name'>
             Enter your Name:
           </label>
           <input
