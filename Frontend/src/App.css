@@ -125,7 +125,7 @@ header{
 .toggle-btn-openclose{
   background:none;
   border: none;
-  color: white;
+  color: rgb(231, 250, 106);
   font-size: 30px;
   cursor: pointer;
   display: none;
@@ -188,7 +188,7 @@ header{
     display: block;
   }
   .toggle-btn{
-    margin-left: 30px;
+    margin-left: 80px;
   }
 }
 
